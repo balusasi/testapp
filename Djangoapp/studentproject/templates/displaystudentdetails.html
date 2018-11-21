@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+table {
+    width:70%; 
+    margin-left:30%; 
+    margin-right:25%;
+  }
+
+ table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    font-size:20px;
+}
+th {
+    text-align: left;
+}
+.container{
+    width:1000px;
+  
+}
+h1{
+    text-align:center;
+    margin-left:50%; 
+    margin-right:25%;
+
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Student Records</h1>
+<table>
+<tr>
+<th>name</th><th>age</th><th>gender</th>
+{%for rec in records%}
+<tr>
+<td>{{rec.name}}</td>
+<td>{{rec.age}}</td>
+<td>{{rec.gender}}</td>
+</tr>
+{%endfor%}
+</table>
+</div>
+</body>
